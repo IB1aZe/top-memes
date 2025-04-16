@@ -87,24 +87,24 @@ export default function ModalMemes({
                   <div>
                     <p>Title:</p>
                     <Input
+                      className="mt-2"
                       defaultValue={memeInputs.title}
                       id="title"
                       required={true}
                       type="text"
                       onChange={(e) => handleChange(e, "title")}
-                      className="mt-2"
                     />
                   </div>
                   <div>
                     <p>URL:</p>
                     <Input
+                      className="mt-2"
                       defaultValue={"http://"}
                       id="url"
                       required={true}
                       type="text"
                       value={memeInputs.url}
                       onChange={(e) => handleChange(e, "url")}
-                      className="mt-2"
                     />
                   </div>
                   <div className="flex flex-row items-center gap-2">

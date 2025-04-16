@@ -22,6 +22,7 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar
+      isMenuOpen={isMenuOpen}
       maxWidth="xl"
       position="sticky"
       onMenuOpenChange={setIsMenuOpen}
@@ -32,7 +33,7 @@ export const Navbar = () => {
           className="sm:hidden"
         />
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="sm:hidden">
         {siteConfig.navItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
@@ -40,6 +41,7 @@ export const Navbar = () => {
               color="foreground"
               href={item.href}
               size="lg"
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
             </Link>
